@@ -1,0 +1,7 @@
+{
+    "name": "Docker Flask",
+    
+    "dockerFile": "Dockerfile",
+
+    "appPort": 3000
+}
