@@ -1,0 +1,7 @@
+.default {
+    font-size: 15px;
+	width: 100%;
+	min-height: 50vh;
+	padding: 10rem 5rem;
+	flex-direction: column;
+}

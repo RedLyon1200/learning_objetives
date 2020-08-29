@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css');
+@import url('normalize.css');
+@import url('navbar.css');
+@import url('banner.css');
+@import url('about.css');
+@import url('default.css');
+@import url('projects.css');
+@import url('hire.css');
+@import url('footer.css');
+@import url('socialmedia.css');
+@import url('media-query-desktop-and-tab.css');
+@import url('media-query-only-desktop.css');
+@import url('footer.css');
+:root {
+  --main-bg-color: brown;
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+.container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

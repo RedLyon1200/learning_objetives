@@ -1,0 +1,10 @@
+@media only screen and (min-widht:1200px) {
+
+    .banner .banner-info .banner-info-heading {
+        font-size: 6rem;
+    }
+
+    .banner .banner-info .banner-info-subheading {
+        letter-spacing: .8rem;
+    }
+}

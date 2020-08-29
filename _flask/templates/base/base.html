@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='cookie.png') }}" sizes="64x64">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <!-- nav-bar  -->
+    <section id="nav-bar" class="container">
+        <header class="nav-bar">
+            <div class="brand">
+                <a href="/"><i class="fas fa-user-injured"></i></a>
+            </div>
+            <div class="nav-list">
+                <div class="hamburger">
+                    <div class="bar"></div>
+                </div>
+                <ul>
+                    <li><a href="/#about">About Me</a></li>
+                    <li><a href="/projects/">Projects</a></li>
+                    <li><a href="/hire/">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+    </section>
+    <!-- End nav-bar  -->
+
+    
+    {% block content %}
+    {% endblock %}
+    
+    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <section class="default container">
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Footer section  -->
+    <footer id="footer" class="footer container">
+        <div class="footer-contact">
+            <p>Sometimes I make mistakes, that's why I never stop learning</p>
+            <h1 class="footer-contact-heading">Contact With Me</h1>
+            <p class="footer-contact-info">Email: yourname@gamil.com</p>
+            <p class="footer-contact-info">WhatsApp: +57 322 454 7942</p>
+        </div>
+        <div class="footer-social-follow">
+            <h1 class="footer-social-follow-heading">Follow Me</h1>
+            <div class="footer-social-icon">
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram-square"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer section  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+    <script src="{{ url_for('static', filename='js/menu.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.js')}}"></script>
+    </body>
+    
+    </html>

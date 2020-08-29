@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% from "_macro.html" import render_field %}
+    {% block content %}
+    <section class="default container">
+        <form id="login-form" method="POST">
+            {{ render_field(form.username) }}<br>
+            {{ render_field(form.password) }}<br>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    {% endblock %}

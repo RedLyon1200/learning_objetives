@@ -1,0 +1,101 @@
+.projects {
+	flex-direction: column;
+	min-height: 60vh;
+	padding: 10rem 5rem;
+}
+.projects .projects-header {
+	width: 100%;
+	text-align: center;
+}
+.projects .projects-header .projects-header-heading {
+	font-size: 4rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: black;
+}
+.projects .projects-header .projects-header-desc {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	margin-top: 20px;
+}
+.projects .projects-info {
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	flex-direction: column;
+}
+.projects .projects-info .project {
+	width: 100%;
+	min-height: 300px;
+	position: relative;
+	transition: .3s ease transform;
+	margin: 5px;
+}
+.projects .projects-info .project .project-card {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transform-style: preserve-3d;
+	transition: .3s ease transform;
+	display: block;
+}
+.projects .projects-info .project .project-card .project-front,
+.projects .projects-info .project .project-card .project-back {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.13);
+	padding: 10px;
+	border-radius: 4px;
+}
+.projects .projects-info .project .project-card .project-back {
+	transform: rotateY(180deg);
+}
+.projects .projects-info .project .project-card .project-front i {
+	font-size: 4rem;
+	color: black;
+	margin-bottom: 10px;
+}
+.projects .projects-info .project .project-card .project-front .project-front-heading,
+.projects .projects-info .project .project-card .project-back .project-back-heading {
+	font-size: 2.5rem;
+	text-transform: capitalize;
+}
+.projects .projects-info .project:hover .project-card {
+	transform: rotateY(180deg);
+}
+.projects .projects-info .project .project-card .project-back .project-back-desc {
+	font-size: 1.3rem;
+	margin-top: 10px;
+	text-align: center;
+}
+.projects .projects-info .project:nth-child(2) .project-card .project-front {
+	background-image: url('../images/img-01.jpg');
+	background-size: cover;
+	position: relative;
+	color: white;
+	border-radius: 4px;
+}
+.projects .projects-info .project:nth-child(2) .project-card .project-front::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.274);
+	z-index: -1;
+	border-radius: 4px;
+}
+.projects .projects-info .project:nth-child(2) .project-card .project-front i {
+	color: white;
+}
